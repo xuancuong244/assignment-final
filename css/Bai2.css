@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    width: 1180px;
+    margin: 0 auto;
+}
+
+
+.wrapper {
+    
+    margin-top: 15px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+   
+}
+
+.img {
+    height: 450px;
+    display: flex;
+}
+
+
+
+img {
+    height: 100%;
+    width: 1180px;
+    object-fit: cover;
+}
+
+.navigation {
+    
+    position: absolute;
+    width: 100%;
+    top: 0;
+    line-height: 481px;
+    color: rgb(223, 59, 59);
+}
+.r {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+.l {
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+}
+
+
+
+.navigation>span>i {
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 50px;
+}
+
+.navigation>span>i:hover {
+    opacity: 0.8;
+    
+}
+/* Dòng hiển thì */
+
+.describe {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 200px;
+}
+
+button.nav-desc {
+    background-color: #000;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+button.nav-desc:hover {
+    background-color: #fff;
+    color: #000;
+    border-radius: 50%;
+    transition: .5s all ease-out;
+    
+}
+button.nav-desc>.bx:hover {
+    color: #000;
+}
+
+button.nav-desc> .bx {
+    color: #fff;
+    font-size: 20px;
+    border: none;
+}
+#dem {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cap {
+    position: absolute;
+    width: 181.31px;
+    height: 61.33px;
+    top: 195px;
+    left: 500px;
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 70px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: darkslateblue;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bai4.css">
+  <title>Login-Đăng nhập tài khoản</title>
+  <script src="js/dangnhap.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body>
+  <form name="formdk" class="container" ng-app="b1" ng-controller="hienthi">
+    <p class="font">ĐĂNG NHẬP</p>
+    <p>
+      <label>Số điện thoại/Email</label>
+      <input type="text" name="sodienthoai" id="sodienthoai" class="txt" required ng-model="sodienthoai" />
+      <em ng-if="formdk.sodienthoai.$invalid">Số điện thoại/Email không được để trống</em>
+    </p>
+    <p>
+      <label>Mật Khẩu</label>
+      <input type="text" name="pass" id="password" class="txt" required ng-model="pass"/>
+      <em ng-if="formdk.pass.$invalid">Nhập mật khẩu</em>
+    </p>
+    <div class="one">
+      <button type="submit" id="dangky" onclick="kiemtra()" ng-click="reset()">Đăng Nhập</button>
+    </div>
+  </form>
+</body>
+</html>
+<script>
+  var app = angular.module("b1", []);
+  app.controller('hienthi', function($scope) {
+  $scope.reset = function(){
+            $scope.sodienthoai = "";
+            $scope.pass = "";  }
+       $scope.reset();  });
+</script>

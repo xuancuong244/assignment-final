@@ -1,0 +1,44 @@
+body{
+    margin: 0 auto;
+}
+.container{
+    width: 400px;
+    margin: auto;
+    padding: 10px 40px;
+    background: whitesmoke;
+    border: 1px solid black;
+    margin: 150px auto;
+}
+.container .txt{
+    width: 400px;
+    padding: 6px;
+    border: 1px solid lightslategrey;
+}
+.container fieldset{
+    border: 1px solid lightslategrey;
+    margin-top: 0;
+    width: 380px;
+}
+.container #dangky{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: royalblue;
+    color: white;
+}
+.container #baoloi{
+    margin: 0 auto;
+    color: red;
+}
+.font{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.one{
+    text-align: center;
+}
+em{
+    color: red;
+    margin-left: 50px auto;
+}

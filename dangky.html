@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PS21684 - Lab 8 - Bài 8</title>
+    <link rel="stylesheet" href="css/bai4.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="js/dangky.js"></script>
+  </head>
+  <body>
+    <form name="formdk" class="container" ng-app="b1" ng-controller="hienthi">
+      <p class="font">ĐĂNG KÝ THÀNH VIÊN</p>
+      <p>
+        <label>Mã Sinh Viên</label>
+        <input type="text" name="masv" id="masv" class="txt" required ng-model="masv"/>
+        <br>
+        <em ng-if="formdk.masv.$invalid">Mã sinh viên không được để trống</em>
+      </p>
+      <p>
+        <label>Họ và tên</label>
+        <input type="text" name="hoten" id="hoten" class="txt" required ng-model="hoten"/>
+        <br>
+        <em ng-show="formdk.hoten.$invalid">Họ tên không được để trống</em>
+      </p>
+      <p>
+        <label>Email</label>
+        <input type="text" name="email" id="email" class="txt" required ng-model="email"/>
+        <br>
+        <em ng-show="formdk.email.$invalid">Email không được để trống</em>
+      </p>
+      <p>
+        <label>Giới tính</label>
+        <fieldset id="fs1">
+           
+            <input type="radio" name="gioitinh" value="Nam" required ng-model="gioitinh" /> <label>Nam</label>
+            <input type="radio" name="gioitinh" value="Nữ"  required ng-model="gioitinh"/> <label>Nữ</label>
+        </fieldset>
+        <br>
+        <em ng-show="formdk.gioitinh.$invalid">Giới tính không được để trống</em>
+      </p>
+      <p>
+        <label>Sở Thích</label>
+        <fieldset id="fs2">
+            
+            <input type="checkbox" name="sothich" required ng-model="sothich1"/> <label>Ăn uống</label>
+            <input type="checkbox" name="sothich" required ng-model="sothich2"/> <label>Du lịch</label>
+            <input type="checkbox" name="sothich" required ng-model="sothich3"/> <label>Mua sắm</label>
+            <input type="checkbox" name="sothich" required ng-model="sothich4"/> <label>Khác</label>
+        </fieldset>
+        <br>
+        <em ng-show="!sothich1 && !sothich2 && !sothich3 && !sothich4">Chọn 1 sở thích</em>
+      </p>
+      <p>
+        <label>Quốc Tịch</label>
+        <br>
+        <select name="quoctich" id="quoctich" class="txt"ng-model="quoctich">
+          <option value="0">Chọn quốc tịch</option>
+          <option value="1">Việt Nam</option>
+          <option value="2">Hàn Quốc</option>
+          <option value="3">Nhật Bản</option>
+        </select>
+        <br>
+        <em ng-show="!quoctich">Quốc tịch không được để trống</em>
+      </p>
+      <p>
+        <label>Ghi chú</label>
+        <br>
+        <textarea class="txt" name="ghichu" id="ghichu" cols="54" rows="5" required ng-model="ghichu"></textarea>
+        <br>
+        <em ng-if="formdk.ghichu.$invalid ">Ghi chú không được để trống</em>
+      </p>
+      <br />
+      <div class="one">
+        <button type="submit" id="dangky" onclick=" kiemtra()" ng-click="reset()">Đăng Ký</button>
+      </div>
+      
+    </form>
+  </body>
+</html>
+
+<script>
+  var app = angular.module("b1", []);
+  app.controller('hienthi', function($scope) {
+  $scope.reset = function(){
+            $scope.masv = "";
+            $scope.hoten = "";
+            $scope.email = "";
+            $scope.gioitinh = "";
+            $scope.sothich1 ="";
+            $scope.sothich2 ="";
+            $scope.sothich3 ="";
+            $scope.sothich4 ="";
+            $scope.quoctich = "";
+            $scope.ghichu = "";
+  }
+       $scope.reset();
+    });
+</script>
